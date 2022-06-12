@@ -1,0 +1,20 @@
+.footer-btn {
+    transition: all 100ms;
+    background-color: #FFFFFF00;
+    border: 1px solid #FFFFFF00;
+}
+
+
+
+.footer-btn:hover {
+    background-color: #FFFFFF56;
+}
+
+.footer-btn:active {
+    background-color: #FFFFFFA1;
+}
+
+
+.active {
+    border: 1px solid red;
+}

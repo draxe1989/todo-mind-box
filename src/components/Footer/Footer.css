@@ -1,0 +1,29 @@
+.footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.state-string {
+    font-family: sans-serif;
+    margin-right: 30px;
+}
+
+.footer-filters {
+
+}
+
+.clear-button {
+    transition: all 100ms;
+    background-color: #FFFFFF00;
+    border: none;
+}
+
+.clear-button:hover {
+    background-color: #FFFFFF56;
+}
+
+.clear-button:active {
+    background-color: #FFFFFFA1;
+}

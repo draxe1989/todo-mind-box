@@ -2,10 +2,11 @@ import './App.css';
 import Input from "../../UI/Input/Input";
 import {useState} from "react";
 import TodoItem from "../TodoItem/TodoItem";
+import Footer from "../Footer/Footer";
 
 function App() {
 
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([{text: 'asdasdasd', id: 1, isCompleted: false}])
     const [filter, setFilter] = useState('All')
 
     const addTodo = (todo)=> {
@@ -48,16 +49,13 @@ function App() {
     }
 
     return (
-        <div>
+        <div className={'container'}>
+            <h1 className={'header'}>TODOS</h1>
             <Input callback={addTodo}/>
-            {filterTodos(filter)}
-            <div>
-                <span>{`${todos.filter(item=>item.isCompleted).length} items left`}</span>
-                <button style={{borderColor: filter==='All' && 'red'}} onClick={()=>setFilter('All')}>All</button>
-                <button style={{borderColor: filter==='Active' && 'red'}} onClick={()=>setFilter('Active')}>Active</button>
-                <button style={{borderColor: filter==='Completed' && 'red'}} onClick={()=>setFilter('Completed')}>Completed</button>
-                <button onClick={deleteAllCompleted}>Clear completed</button>
+            <div className={'todos'}>
+                {filterTodos(filter)}
             </div>
+            <Footer todos={todos} filter={filter} setFilter={setFilter}  deleteAllCompleted={deleteAllCompleted}/>
         </div>
     );
 }

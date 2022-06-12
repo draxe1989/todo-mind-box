@@ -1,1 +1,12 @@
-
+.container {
+    padding: 20px;
+    background: lightslategray;
+}
+.header {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 46px;
+}
+.todos {
+    min-height: 15em;
+}
